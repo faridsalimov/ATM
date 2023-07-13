@@ -1,0 +1,35 @@
+﻿<Window x:Class="ATM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATM"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="ATM" Height="450" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBox Name="CardNumberTextBox" Margin="15,15" Height="40" FontSize="15"/>
+            <Button Content="Insert Card" Name="InsertCardButton" Margin="15,-5" Height="45" FontSize="20" FontWeight="Bold" Click="InsertCardButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <TextBox Name="CardNameTextBox" IsEnabled="False" Margin="15,10" Height="30" FontSize="15" VerticalAlignment="Top"/>
+            <TextBox Name="CardAmountTextBox" IsEnabled="False" Margin="15,0" Height="30" FontSize="15" VerticalAlignment="Top"/>
+            <Button Content="Load Data" Name="LoadDataButton" Margin="15,15" FontSize="20" Height="40" FontWeight="Regular" Click="LoadDataButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <TextBox Name="ComingAmountTextBox" IsEnabled="False" Margin="15,10" Height="30" FontSize="15" VerticalAlignment="Top"/>
+            <TextBox Name="WithdrawAmountTextBox" Margin="15,0" Height="30" FontSize="15" VerticalAlignment="Top"/>
+            <Button Content="Transfer Money" Name="TransferButton" Margin="15,15" FontSize="20" Height="40" FontWeight="Regular" Click="TransferButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
